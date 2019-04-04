@@ -1,9 +1,9 @@
 package rtree
 
 class RecursiveBinaryTree <T>(gelem: T, feval: (T,T) -> Boolean) {
-    val elem : T = gelem
+    private val elem : T = gelem
     // eval is assumed to act as a less-than function
-    val eval = feval
+    private val eval = feval
     private var leaves : Pair<RecursiveBinaryTree<T>?, RecursiveBinaryTree<T>?> = pairOf(null)
 
     private fun pairOf (elem : RecursiveBinaryTree<T>?) : Pair<RecursiveBinaryTree<T>?,RecursiveBinaryTree<T>?> {
